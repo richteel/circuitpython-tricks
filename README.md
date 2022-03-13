@@ -1162,19 +1162,19 @@ if 'a' in my_globals:
 if 'c' in my_globals:
   print("you have a variable named 'c'!")
 
-### List all global variables with types
+### List all global variables with types in tab delimited list
 ```py
 a = 123
 b = 'hello there'
-my_globals = sorted(dir())
+my_globals = sorted(globals())
 i = 1
 for g in my_globals:
-    print(i, g, type(globals()[g]))
+    print(str(i) + chr(9) + g + chr(9) + str(type(globals()[g])))
     i = i + 1
 # prints
-#	1 __name__ str
-#	2 a int
-#	3 b str
+#	1	__name__	<class 'str'>
+#	2	a	<class 'int'>
+#	3	b	<class 'str'>
 ```
 
 ### Display the running CircuitPython release
