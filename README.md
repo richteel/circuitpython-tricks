@@ -1161,6 +1161,7 @@ if 'a' in my_globals:
   print("you have a variable named 'a'!")
 if 'c' in my_globals:
   print("you have a variable named 'c'!")
+```
 
 ### List all global variables with types in tab delimited list
 ```py
