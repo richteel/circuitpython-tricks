@@ -1154,13 +1154,27 @@ prints "dict_keys(['neopixel', 'adafruit_dotstar'])"
 ```py
 a = 123
 b = 'hello there'
-my_globals = sorted(dir)
+my_globals = sorted(dir())
 print(my_globals)
 # prints "['__name__', 'a', 'b']"
 if 'a' in my_globals:
   print("you have a variable named 'a'!")
 if 'c' in my_globals:
   print("you have a variable named 'c'!")
+
+### List all global variables with types
+```py
+a = 123
+b = 'hello there'
+my_globals = sorted(dir())
+i = 1
+for g in my_globals:
+    print(i, g, type(globals()[g]))
+    i = i + 1
+# prints
+#	1 __name__ str
+#	2 a int
+#	3 b str
 ```
 
 ### Display the running CircuitPython release
